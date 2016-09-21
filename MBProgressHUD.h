@@ -269,6 +269,9 @@ typedef void (^MBProgressHUDCompletionBlock)();
 - (void)showAnimated:(BOOL)animated whileExecutingBlock:(dispatch_block_t)block onQueue:(dispatch_queue_t)queue
 		  completionBlock:(MBProgressHUDCompletionBlock)completion;
 
+
+- (UILabel *)getLable;
+
 /**
  * A block that gets called after the HUD was completely hidden.
  */
@@ -438,6 +441,11 @@ typedef void (^MBProgressHUDCompletionBlock)();
  * Force the HUD dimensions to be equal if possible. 
  */
 @property (assign, getter = isSquare) BOOL square;
+
+/**
+ *
+ */
+ 
 
 @end
 

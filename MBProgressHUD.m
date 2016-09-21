@@ -452,6 +452,10 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 
 #pragma mark - UI
 
+- (UILabel *)getLable {
+    return label;
+}
+
 - (void)setupLabels {
 	label = [[UILabel alloc] initWithFrame:self.bounds];
 	label.adjustsFontSizeToFitWidth = NO;
@@ -574,6 +578,8 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	if (labelSize.height > 0.f && indicatorF.size.height > 0.f) {
 		yPos += kPadding;
 	}
+    labelSize.width += 6.0f;
+    labelSize.height += 6.0f;
 	CGRect labelF;
 	labelF.origin.y = yPos;
 	labelF.origin.x = round((bounds.size.width - labelSize.width) / 2) + xPos;
